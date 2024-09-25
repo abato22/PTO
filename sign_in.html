@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PTO Manager</title>
+		<link rel="stylesheet" type="text/css" href="./styles/style_sign_in.css" />
+		<link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+	</head>
+	<body>
+		<header id="header-id">
+			<h1>PTO Manager</h1>
+		</header>
+		<div id="sign-in-container">
+            <h1>Sign In</h1>
+            <form id="sign-in-form"  action="pto.html">
+                <label for="email-id">E-mail :</label>  
+				<input type="email" placeholder="Enter E-mail" id="email-id" name="e-mail" required>
+                <label for="pass-id">Password :</label>   
+                <input type="password" placeholder="Enter Password" id="pass-id" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}" 
+				       title="At least 8 characters, including 1 number, 1 uppercase letter, 1 lowercase letter and 1 special character" required>
+					   <!-- regex password validation -->
+					   <!-- (?=.*\d) checks if there is at least one number              -->
+					   <!-- (?=.*[a-z]) checks if there is at least one lowercase letter -->
+					   <!-- (?=.*[A-Z]) checks if there is at least one uppercase letter -->
+					   <!-- (?=.*[\W]) checks if there is at least one special character -->
+					   <!-- {8,} checks if there is at least 8 characters in password    -->
+				<div>
+					<input type="checkbox" id="checkbox-id">
+					<label for="checkbox-id">Show Password</label>  
+				</div>  
+				<button type="submit" id="submit-id">Sign In</button>
+            </form>
+        </div>	
+	</body>
+	<script src="./sign_in.js"></script>
+</html>

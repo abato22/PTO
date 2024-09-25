@@ -1,0 +1,60 @@
+body{
+    background-image: url("../background_image.jpg");
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+	justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#header-id{
+    background-color: rgba(0, 0, 255, 0.334);
+    width: 100%;
+}
+
+#sign-in-container{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 255, 0.334);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+}
+
+#sign-in-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+input[type=email], input[type=password], input[type=text]{   
+    margin: 8px 0;  
+    padding: 15px; 
+    border-radius: 30px;  
+    height: 20px;
+    border: none;
+}  
+
+button[type=submit]{
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+}
+
+button[type=submit]{
+    cursor: pointer;
+}
+
+button[type=submit]:hover{
+    background-color: darkgrey;
+}
+
+#chbox-id{
+    width: 10%;
+}

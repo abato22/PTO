@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PTO Manager</title>
+		<link rel="stylesheet" type="text/css" href="./styles/style_pto.css" />
+		<link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+	</head>
+	<body>
+		<header id="header-id">
+			<h1>PTO Manager</h1>
+			<div id="log-out-id">
+				<a href="sign_in.html">
+					<h1 id="h1-log-out-id">Log Out</h1>
+				</a>
+			</div>
+		</header>
+		<div id="content-container">
+			<div id="employee-id">
+				<div id="select-employee">
+					<label id="select-employee-label">Select Employee</label>
+					<i class="bx bx-chevron-down" id="arrow"></i>
+				</div>
+				<div id="employee-menu" class="employee-menu">
+				</div>
+				<div id="invisible-employee-container" class="invisible-employee-container">
+					<div id="visible-employee-container" class="visible-employee-container">
+					</div>
+					<h4 class="invisible-employee-info">Employee info</h4>
+					<div id="employee-full-name" class="invisible-employee-info">
+						<label>Fullname:</label>
+						<label class="content"></label>
+					</div>
+					<div id="employee-username" class="invisible-employee-info">
+						<label>Username:</label>
+						<label class="content"></label>
+					</div>
+					<div id="employee-id" class="invisible-employee-info">
+						<label>Id:</label>
+						<label class="content"></label>
+					</div>
+					<div id="employee-email" class="invisible-employee-info">
+						<label>Email:</label>
+						<label class="content"></label>
+					</div>
+					<div id="employee-phone" class="invisible-employee-info">
+						<label>Phone:</label>
+						<label class="content"></label>
+					</div>
+					<div id="employee-website" class="invisible-employee-info">
+						<label>Website:</label>
+						<label class="content"></label>
+					</div>
+				</div>
+			</div>
+
+			<div id="start-date-id">
+				<div class="calendar">
+					<div class="header">
+						<button id="start-prevBtn">
+							<i class="fa-solid fa-chevron-left"></i>
+						</button>
+						<div id="start-monthYear" class="monthYear"></div>
+						<button id="start-nextBtn">
+							<i class="fa-solid fa-chevron-right"></i>
+						</button>	
+					</div>
+					<div class="days">
+						<div class="day">Mo</div>
+						<div class="day">Tu</div>
+						<div class="day">We</div>
+						<div class="day">Th</div>
+						<div class="day">Fr</div>
+						<div class="day">Sa</div>
+						<div class="day">Su</div>
+					</div>
+					<div id="start-dates" class="dates"></div>
+				</div>
+			</div>
+
+			<div id="end-date-id">
+				<div id="calendar" class="calendar">
+					<div class="header">
+						<button id="end-prevBtn">
+							<i class="fa-solid fa-chevron-left"></i>
+						</button>
+						<div id="end-monthYear" class="monthYear"></div>
+						<button id="end-nextBtn">
+							<i class="fa-solid fa-chevron-right"></i>
+						</button>	
+					</div>
+					<div class="days">
+						<div class="day">Mo</div>
+						<div class="day">Tu</div>
+						<div class="day">We</div>
+						<div class="day">Th</div>
+						<div class="day">Fr</div>
+						<div class="day">Sa</div>
+						<div class="day">Su</div>
+					</div>
+					<div id="end-dates" class="dates"></div>
+				</div>
+			</div>
+			
+			<div id="add-pto-date">
+				<button id="addPtoBtn">
+					<h2>Add PTO</h2>
+				</button>
+			</div>
+		</div>
+		<div id="pto-container" class="pto-container">
+		</div>
+	</body>
+	<script src="./pto.js"></script>
+</html>

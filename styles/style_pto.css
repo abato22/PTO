@@ -1,0 +1,387 @@
+body{
+    background-image: url("../background_image.jpg");
+	background-attachment: fixed;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+	justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*************HEADER***********/
+
+#header-id{
+    background-color: rgba(0, 0, 255, 0.334);
+    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+#log-out-id{
+	padding-right: 10px;
+}
+
+#h1-log-out-id:hover{
+	background-color: rgba(244, 242, 242, 0.818);
+	border-radius: 10px;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+#content-container{
+    width: 100%;
+	height: 270px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 5%;
+}
+
+/***********EMPLOYEE************/
+
+#select-employee{
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: large;
+	margin-bottom: 5px;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 260px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#select-employee-label{
+	cursor: pointer;
+}
+
+#select-employee:hover{
+	background-color: rgba(244, 242, 242, 0.818);
+}
+
+#arrow{
+	margin-left: 70px;
+	font-size: x-large;
+}
+
+.arrow {
+	transform: rotate(180deg);
+	transition: 0.2s ease;
+}
+
+#employee-menu{
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 10px;
+	border: none;
+	width: 250px;
+	font-weight: 500;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	position: absolute;
+	z-index: 1;
+	transition: 0.2s ease;
+}
+
+.employee-menu{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.employee-name{
+	margin-left: 4px;
+	width: 250px;
+	height: 25px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.employee-name:hover{
+	cursor: pointer;
+	background-color: rgba(244, 242, 242, 0.818);
+}
+
+#invisible-employee-container{
+	width: 260px;
+}
+
+.invisible-employee-info{
+	visibility: hidden;
+	opacity: 0;
+	position: relative;
+}
+
+.visible-employee-container{
+	position: absolute;
+	background-color: white;
+	width: 260px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	transition: 0.2s ease;
+}
+
+.visible-employee-info{
+	padding: 3px;
+	font-weight: 500
+}
+
+#h2-title{
+	margin: 0;
+	padding: 3px;
+}
+
+#line{
+	margin-top: 0;
+}
+
+/*************START DATE/END DATE**************/
+
+.calendar{
+	width: 250px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	padding-bottom: 15px;
+	padding-top: 17px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.monthYear{
+	text-align: center;
+	font-weight: 500;
+	width: 100px;
+}
+
+.header button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.header button:hover{
+	background-color: rgba(244, 242, 242, 0.818);
+}
+
+.days{
+	display: grid;
+	grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+	text-align: center;
+	padding: 3px;
+	color:#999FA6;
+	font-weight: 500;
+}
+
+.dates{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 5px;
+}
+
+.date{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+	margin: auto;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+	transition: 0.2s;
+}
+
+.date:hover{
+	background-color: rgba(255, 0, 0, 0.605);
+	color: #fff;
+	border-radius: 0;
+}
+
+.date.active{
+    background-color: rgba(0, 0, 255, 0.548);
+	color: #fff;
+}
+
+.date.inactive{
+	color: #d2d2d2;
+}
+
+.date.inactive:hover{
+	color: #fff;
+}
+
+.selected{
+	background-color: rgba(255, 0, 0, 0.605);
+	color: white;
+	border-radius: 0;
+}
+
+/*ADD PTO BUTTON*/
+
+#add-pto-date{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#addPtoBtn{
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	border: none;
+	background-color: white;
+}
+
+#addPtoBtn:hover{
+	background-color: rgba(244, 242, 242, 0.818);
+	cursor: pointer;
+}
+
+/*PTO CONTAINER*/
+
+.pto-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.pto{
+	margin: 45px 50px;
+	background-color: white;
+	width: 360px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	transition: 0.2s ease;
+}
+
+.pto-element{
+	margin-top: 7px;
+}
+
+.pto-info{
+	font-weight: 1000;
+	font-size: x-large;
+	width: 360px;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.x-button{
+	background-color: white;
+	position: absolute;
+	top: -4px;
+	right: 0px;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: red;
+}
+
+.x-button:hover{
+	cursor: pointer;
+}
+
+.spring{
+	background-image: url("https://a-static.besthdwallpaper.com/beautiful-spring-flowers-in-the-tree-wallpaper-960x540-11098_43.jpg");
+	background-size: cover;
+}
+
+.summer{
+	background-image: url("../summer_image.jpg");
+	background-size: cover;
+}
+
+.autumn{
+	background-image: url("https://www.elitetreecare.com/wp-content/uploads/2019/10/autum-leaves.jpg");
+	background-size: cover;
+}
+
+.winter{
+	background-image: url("../winter_image.jpg");
+	background-size: cover;
+}
+
+
+@media screen and (max-width: 480px){
+	body{
+		background-attachment: fixed;
+	}
+
+	#header-id{
+		width: 480px;
+	}
+
+	#content-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 10px;
+		height: 850px;
+	}
+
+	#start-date-id{
+		margin-top: 50px;
+		margin-bottom: 15px;
+	}
+
+	.calendar{
+		width: 240px;
+	}
+
+	#add-pto-date{
+		margin-top: 10px;
+	}
+
+	.pto-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
